@@ -1,0 +1,16 @@
+{
+  "url":"https://news.google.com/home/",
+  "load_time": 5,
+  "top_stories_string":"Top stories",
+  "article_class": "article.IBr9hb",
+  "headline_class": "article.IBr9hb > a.gPFEn",
+  "thumbnail_class": "figure.K0q4G.P22Vib > img.Quavad.vwBmvb",
+  "newspaper_class": "article.IBr9hb > div.MCAGUe",
+  "date_class": "article.IBr9hb > div.UOVeFe > time.hvbAAd",
+  "mongo_db_connection_string": "mongodb://localhost:27017/",
+  "mongo_db_database": "google_news",
+  "mongo_db_collection": "google_news",
+  "thumbnail_threshold": 0.8,
+  "headline_threshold": 0.9
+}
+

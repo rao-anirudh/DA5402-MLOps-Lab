@@ -1,0 +1,18 @@
+2025-02-01 14:09:44,743 - INFO - Script started.
+2025-02-01 14:09:44,744 - INFO - Configuration file read.
+2025-02-01 14:10:21,966 - INFO - 45 articles scraped from Google News.
+2025-02-01 14:10:21,998 - INFO - Connected to MongoDB.
+2025-02-01 14:10:24,122 - INFO - Loaded CLIP model.
+2025-02-01 14:10:30,617 - INFO - 10 duplicate articles detected.
+2025-02-01 14:10:30,617 - INFO - 35 new articles added to MongoDB.
+2025-02-01 14:10:30,617 - INFO - Script finished successfully.
+
+2025-02-01 14:11:24,071 - INFO - Script started.
+2025-02-01 14:11:24,071 - INFO - Configuration file read.
+2025-02-01 14:12:00,667 - INFO - 47 articles scraped from Google News.
+2025-02-01 14:12:00,698 - INFO - Connected to MongoDB.
+2025-02-01 14:12:06,997 - INFO - Loaded CLIP model.
+2025-02-01 14:12:11,803 - INFO - 44 duplicate articles detected.
+2025-02-01 14:12:11,803 - INFO - 3 new articles added to MongoDB.
+2025-02-01 14:12:11,803 - INFO - Script finished successfully.
+
