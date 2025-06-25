@@ -1,0 +1,51 @@
+stages:
+  pull_data:
+    cmd: python pull_data.py
+    params:
+      - random_seed
+      - dataset_version
+    outs:
+      - dataset.pkl
+
+  prepare_data:
+    cmd: python prepare_data.py
+    deps:
+      - dataset.pkl
+    params:
+      - random_seed
+      - data_split.train
+      - data_split.val
+      - data_split.test
+    outs:
+      - train.pkl
+      - val.pkl
+      - test.pkl
+
+  train_model:
+    cmd: python train_model.py
+    deps:
+      - train.pkl
+      - val.pkl
+    params:
+      - random_seed
+      - training.lr
+      - training.kernel_size
+      - training.maxpool_kernel_size
+      - training.maxpool_stride
+      - training.epochs
+      - training.tuning.conv_layers
+      - training.tuning.conv_filters
+    outs:
+      - model.pkl
+    metrics:
+      - model_params.json
+
+  evaluate:
+    cmd: python evaluate.py
+    deps:
+      - model.pkl
+      - test.pkl
+    params:
+      - random_seed
+    metrics:
+      - evaluation_report.json

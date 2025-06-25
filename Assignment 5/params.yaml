@@ -1,0 +1,28 @@
+dataset_version: v1
+
+data_split:
+  train: 0.7
+  val: 0.15
+  test: 0.15
+
+random_seed: 5402
+
+training:
+  batch_size: 32
+  epochs: 5
+  kernel_size: 2
+  lr: 0.001
+  maxpool_kernel_size: 2
+  maxpool_stride: 2
+  tuning:
+    conv_filters:
+      - 2
+      - 4
+      - 8
+    conv_layers:
+      - 1
+      - 2
+      - 3
+
+testing:
+  batch_size: 32
