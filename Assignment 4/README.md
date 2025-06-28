@@ -14,7 +14,7 @@ Wait for logs to show the database is healthy and the RSS reader is inserting en
 Visit:
 
 ```
-http://localhost:8080
+http://localhost:8043
 ```
 
 You will see articles from **today**. Each entry includes the title, publication time, image (if available), and summary.
