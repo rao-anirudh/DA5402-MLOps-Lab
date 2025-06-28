@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  db:
+    build: ./db
+    env_file: .env.db
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin"]
+      interval: 5s
+      retries: 5
+    ports:
+      - "5432:5432"
+
+  rss:
+    build: ./rss_reader
+    env_file: .env.rss
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build: ./web
+    env_file: .env.web
+    ports:
+      - "8043:80"
+    depends_on:
+      db:
+        condition: service_healthy
