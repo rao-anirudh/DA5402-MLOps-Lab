@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Today’s Articles</title></head>
+<body>
+  <h1>Today’s Articles</h1>
+  {% for id, title, published, link, summary in articles %}
+    <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+      <h2><a href="{{ link }}" target="_blank">{{ title }}</a></h2>
+      <img src="/image/{{ id }}" style="max-width:300px;"><br>
+      <small>{{ published }}</small>
+      <p>{{ summary }}</p>
+    </div>
+  {% endfor %}
+</body>
+</html>
